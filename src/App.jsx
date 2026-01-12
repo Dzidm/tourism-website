@@ -3,8 +3,8 @@ import './App.css';
 import Landing from './pages/Home';
 import About from './pages/About';
 import Listings from './pages/Listings';
-import Contact from './pages/contact';
-import CV from './pages/cv';
+import Contact from './pages/Contact';
+import CV from './pages/Cv';
 import RootLayout from './layout/RootLayout';
 import Teaching from './pages/Teaching';
 
