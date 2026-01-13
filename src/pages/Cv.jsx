@@ -58,7 +58,7 @@ export default function CV() {
         </h2>
         <p className="text-amber-800 leading-relaxed">
           I started my academic journey studying French and Psychology at the University
-          of Ghana, developing a strong foundation in research, analysis, and critical thinking.
+          of Ghana, developing a strong foundation in language, literature, human behaviour, analysis, and critical thinking.
           During this time, I became fascinated by the potential of digital tools to communicate
           research effectively. This led me to web development, where I now create dynamic,
           user-friendly platforms for showcasing academic work. My dual expertise allows me
