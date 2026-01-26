@@ -1,6 +1,8 @@
 import React from "react";
+import { Link } from "react-router";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Footer from "../components/Footer"
+import academicCV from "../assets/files/Dzidzo_Mpya- Academic CV.pdf"
 
 export default function CV() {
   return (
@@ -14,7 +16,7 @@ export default function CV() {
           I have an academic background in French and literature and psychology, with a strong interest in language, identity, and memory. My journey also extends into web development, where I focus on building responsive, user-centered interfaces that connect critical thinking with technology.
         </p>
         <a
-          href="/assets/Dzidzo_CV.pdf"
+          href={academicCV}
           download
           className="inline-block mt-6 bg-amber-900 text-white px-8 py-3 rounded-lg hover:bg-amber-800 transition"
         >
@@ -66,6 +68,16 @@ export default function CV() {
           depth and nuance of the research they present.
         </p>
       </section>
+
+      {/* BACK TO HOME BUTTON */}
+        <div className="max-w-7xl mx-auto px-6 py-6 flex justify-end">
+        <Link
+          to="/"
+          className="inline-block text-sm text-amber-900 border border-amber-900 px-4 py-2 rounded hover:bg-amber-900 hover:text-white transition"
+        >
+          ← Back to Home
+        </Link>
+        </div>
     <Footer/>
     </div>
   );

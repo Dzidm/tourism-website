@@ -13,7 +13,7 @@ export default function Home2() {
 
       {/* HERO - FULL WIDTH IMAGE STYLE */}
       <section className="relative">
-        <div className="h-[500px] bg-amber-100 flex items-center justify-center">
+        <div className="min-h-screen bg-amber-100 flex items-center justify-center">
           <div className="text-center px-6">
             <h1 className="font-serif text-5xl md:text-6xl mb-4">
               French & Psychology (BA)
@@ -65,37 +65,59 @@ export default function Home2() {
         </div>
       </section>
 
-      {/* FEATURED WORK */}
-      <section className="bg-amber-50 py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <h3 className="font-serif text-3xl text-amber-900 mb-12 text-center">
-            Selected Research
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {[
-              "Identity and the Quest for Self in Annie Ernaux",
-              "Silence and Patriarchy in Autobiographical Writing",
-              "Women’s Memory in Francophone Literature",
-            ].map((title, index) => (
-              <div
-                key={index}
-                className="border border-amber-200 p-6 hover:border-amber-900 transition"
-              >
-                <h4 className="font-serif text-xl mb-4 text-amber-900">
-                  {title}
-                </h4>
-                <p className="text-amber-800 text-sm leading-relaxed">
-                  An exploration of narrative identity, memory construction,
-                  and gendered silence in Francophone texts.
-                </p>
-                <a className="inline-block mt-4 text-sm hover:underline">
-                  Read more →
-                </a>
-              </div>
-            ))}
+        {/* FEATURED WORK */}
+        <section className="bg-amber-50 py-24">
+          <div className="max-w-7xl mx-auto px-6">
+            <h3 className="font-serif text-3xl text-amber-900 mb-12 text-center">
+              Selected Writings
+            </h3>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+              {[
+                {
+                  title: "Identity and the Quest for Self in Annie Ernaux",
+                  path: "/listings",
+                  description:
+                    "A literary and psychological analysis of identity formation in Annie Ernaux’s L’Autre Fille, examining how memory, absence, and a hidden family secret reshape the narrator’s sense of self.",
+                },
+                {
+                  title: "From Language to Mind to Computation",
+                  path: "/journey",
+                  description:
+                    "A reflective academic essay tracing my intellectual journey from French and Psychology through literary and cognitive inquiry to web development and artificial intelligence, with language as the unifying thread.",
+                },
+                {
+                  title: "Cold: Walking Without Arrival",
+                  path: "/poem",
+                  description:
+                      "A poem reflecting on exhaustion, survival, and self-preservation in a culture that equates constant motion with worth.",
+                },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="border border-amber-200 p-6 hover:border-amber-900 transition"
+                >
+                  <h4 className="font-serif text-xl mb-4 text-amber-900">
+                    {item.title}
+                  </h4>
+
+                  <p className="text-amber-800 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+
+                  <Link
+                    to={item.path}
+                    className="inline-block mt-4 text-sm text-amber-800 hover:underline cursor-pointer"
+                  >
+                    Read more →
+                  </Link>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+
      <Footer/>
     </div>
   );

@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import frenchEssay from "../assets/files/Writing_Sample.pdf";
+import englishEssay from "../assets/files/Essay_English.pdf"
 
 export default function Listings() {
   return (
@@ -52,17 +54,26 @@ export default function Listings() {
             English translation of the original essay, created to make the analysis
             accessible to a wider academic audience.
           </p>
-          {/* <a
+          <a
             href={englishEssay}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block text-amber-700 font-medium hover:underline cursor-pointer"
           >
             View Essay →
-          </a> */}
+          </a>
         </div>
-
       </section>
+
+      {/* BACK TO HOME BUTTON */}
+        <div className="max-w-7xl mx-auto px-6 py-6 flex justify-end">
+        <Link
+          to="/"
+          className="inline-block text-sm text-amber-900 border border-amber-900 px-4 py-2 rounded hover:bg-amber-900 hover:text-white transition"
+        >
+          ← Back to Home
+        </Link>
+        </div>
 
       <Footer />
     </div>

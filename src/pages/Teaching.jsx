@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -62,6 +63,16 @@ export default function Teaching() {
           I believe in adaptive teaching approaches that respect individual learning differences. My work emphasizes engagement, critical thinking, and creating inclusive, supportive learning environments. Skills developed include curriculum design, mentoring, academic support, and integrating technology to enhance learning.
         </p>
       </section>
+
+      {/* BACK TO HOME BUTTON */}
+        <div className="max-w-7xl mx-auto px-6 py-6 flex justify-end">
+        <Link
+          to="/"
+          className="inline-block text-sm text-amber-900 border border-amber-900 px-4 py-2 rounded hover:bg-amber-900 hover:text-white transition"
+        >
+          ← Back to Home
+        </Link>
+        </div>
 
       <Footer />
     </div>
